@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- this file has 5 intentional errors for testing the Verification method -->
-<!-- error 1: root is NationalPark instead of NationalParks -->
-<!-- error 2: yosemite address is missing the NearestAirport attribute -->
-<!-- error 3: zion has no Phone element -->
-<!-- error 4: rocky mountain Address element is not closed -->
-<!-- error 5: olympic has two Name elements -->
 <NationalPark xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/NationalParks.xsd">
 
-  <!-- grand canyon - no errors here -->
   <NationalPark Rating="4.9">
     <Name>Grand Canyon</Name>
     <Phone>928-638-7496</Phone>
@@ -23,7 +16,6 @@
     </Address>
   </NationalPark>
 
-  <!-- yellowstone - no errors -->
   <NationalPark Rating="4.8">
     <Name>Yellowstone</Name>
     <Phone>307-344-7381</Phone>
@@ -37,7 +29,7 @@
     </Address>
   </NationalPark>
 
-  <!-- yosemite - error 2: NearestAirport attribute missing from Address -->
+  <!-- error 2: no NearestAirport on this one -->
   <NationalPark Rating="4.9">
     <Name>Yosemite</Name>
     <Phone>209-372-0200</Phone>
@@ -50,7 +42,7 @@
     </Address>
   </NationalPark>
 
-  <!-- zion - error 3: no Phone element at all -->
+  <!-- error 3: no phone -->
   <NationalPark>
     <Name>Zion</Name>
     <Address NearestAirport="St. George">
@@ -62,7 +54,7 @@
     </Address>
   </NationalPark>
 
-  <!-- rocky mountain - error 4: Address element has no closing tag -->
+  <!-- error 4: address tag not closed -->
   <NationalPark Rating="4.7">
     <Name>Rocky Mountain</Name>
     <Phone>970-586-1206</Phone>
@@ -74,7 +66,7 @@
       <Zip>80517</Zip>
   </NationalPark>
 
-  <!-- olympic - error 5: two Name elements provided -->
+  <!-- error 5: two name elements -->
   <NationalPark>
     <Name>Olympic National Park</Name>
     <Name>Olympic</Name>

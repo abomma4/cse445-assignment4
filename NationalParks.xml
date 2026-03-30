@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- national parks directory - instance of NationalParks.xsd -->
-<!-- includes 11 parks, some have Rating attribute and some dont -->
-<!-- some parks have multiple phone numbers as required by the assignment -->
 <NationalParks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:noNamespaceSchemaLocation="https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/NationalParks.xsd">
 

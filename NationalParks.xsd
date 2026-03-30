@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- schema for the national parks xml file -->
-<!-- defines structure for NationalParks > NationalPark > Name, Phone(s), Address -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <!-- root element wraps all the parks -->
   <xs:element name="NationalParks">
     <xs:complexType>
       <xs:sequence>
-        <!-- need at least one park, can have as many as we want -->
         <xs:element name="NationalPark" type="NationalParkType" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <!-- each park has a name, at least one phone, and an address -->
-  <!-- Rating is optional - some parks have it some dont -->
+  <!-- NationalPark has name, phones, address. rating is optional -->
   <xs:complexType name="NationalParkType">
     <xs:sequence>
       <xs:element name="Name" type="xs:string"/>
-      <!-- phone can appear multiple times per park -->
       <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
       <xs:element name="Address" type="AddressType"/>
     </xs:sequence>
     <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
   </xs:complexType>
 
-  <!-- address breakdown - street number, street name, city, state, zip -->
   <!-- NearestAirport is required on every address -->
   <xs:complexType name="AddressType">
     <xs:sequence>
