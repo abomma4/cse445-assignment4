@@ -141,4 +141,17 @@
     </Address>
   </NationalPark>
 
+  <NationalPark Rating="4.8">
+    <Name>Bryce Canyon</Name>
+    <Phone>435-834-5322</Phone>
+    <Phone>435-834-4747</Phone>
+    <Address NearestAirport="Cedar City">
+      <Number>1</Number>
+      <Street>Bryce Canyon Highway</Street>
+      <City>Bryce Canyon City</City>
+      <State>UT</State>
+      <Zip>84764</Zip>
+    </Address>
+  </NationalPark>
+
 </NationalParks>
